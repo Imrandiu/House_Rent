@@ -1,0 +1,24 @@
+Run : php artisan serve
+
+
+in htdoc folder cmd
+create project :composer create-project laravel/laravel
+
+
+if laravel show carbon error or datetime error then write in command
+php artisan key:generate
+
+support ajax write it inside head :
+<meta name="_token" content="{{ csrf_token() }}">
+and write this befor line call ajax
+$.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content') } });
+
+angkor tag use 
+<a href="{{ url('/main2')}}">click</a>
+
+Clear route cache
+php artisan route:cache
+
+for support database inside creating your controller,paste this in header
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
